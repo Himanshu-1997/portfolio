@@ -1,0 +1,54 @@
+.headContainer{
+    display: flex;
+    background-color: #282c34;
+    justify-content: center;
+    height: 100vh;
+    .headerWrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        .headFLine{
+            color: white;
+            font-size: 32pt;
+            line-height: 36pt;
+            span{
+                color: #e31b6d;
+                // animation: type 4s steps(60, end);
+                // animation: blink 1s infinite; 
+            }
+            
+        }
+        .headSLine{
+            color: white;
+            font-size: 32pt;
+            line-height: 36pt;
+
+        }
+        .viewWork{
+            color: white;
+            border: 1px solid white;
+            width: fit-content;
+            display: flex;
+            align-self: center;
+            padding: 20px;
+            margin: 30px;
+            font-size: 20px;
+            img{
+                margin-left: 15px;
+                transition: all 0.5s ease;
+                margin-top: 3px;
+                height: 18px;
+            }
+            &:hover{
+                background-color:#e31b6d;
+                img{
+                    transform: rotateZ(90deg);
+                }
+            }
+        }
+    }
+}
+// @keyframes type{ 
+//     from { width: 0; } 
+//   } 

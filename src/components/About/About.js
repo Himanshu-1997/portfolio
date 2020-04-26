@@ -30,7 +30,7 @@ const About  = () =>{
                     <div className='about'>About</div>
                     <div className='experience'>Experience</div>
                     <div className='education'>Education</div>
-                    <div className='resume'>Resume</div>
+                    <a className='resume' href='https://drive.google.com/file/d/1RENgWHxglsc0Ewln-ELbdze6ijnhU1Fg/view' rel="noopener noreferrer" target='_blank'>Resume</a>
                     <div className='contact'>Contact</div>
                 </div>
             </div>

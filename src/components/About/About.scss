@@ -46,6 +46,9 @@
                 }
             }
             .resume{
+                text-decoration: none;
+                color:white;
+                cursor: default;
                 &:hover{
                     color: #e31b6d;
                 }

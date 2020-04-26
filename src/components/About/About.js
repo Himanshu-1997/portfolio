@@ -19,14 +19,14 @@ const About  = () =>{
         //     // navbar.classList.remove(".sticky");
         //   }
     }
-    const calc = (num, per) =>{
-        return (num/100)*per;
+    const handleClick = () =>{
+        
     }
     return (
         <div className='aboutContainer'>
             <div className={classNames('navbar',{'sticky':false})} ref={navRef} onScroll={() => handleScroll()}>
                 <div className='navBarContainer'>
-                    <div className={classNames('home',{'active':true})}>Home</div>
+                    <div className={classNames('home',{'active':true})} onClick={handleClick}>Home</div>
                     <div className='about'>About</div>
                     <div className='experience'>Experience</div>
                     <div className='education'>Education</div>

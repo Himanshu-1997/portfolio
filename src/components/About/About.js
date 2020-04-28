@@ -5,26 +5,23 @@ import './About.scss';
 
 const About  = () =>{
     const navRef = React.createRef();
-    const handleScroll = (e) => {
-        // let scrollTop = navRef.current.scrollTop;
-        // console.log(scrollTop);
-        console.log(e.target);
-        console.log('himanshu');
-        // let navbar = document.getElementsByClassName('.navbar');
-        // let sticky  = navbar.pageYOffset;
-        // console.log(sticky,"himanshu", window.pageYOffset);
-        // if (window.pageYOffset >= sticky) {
-        //     navbar.classList.add(".sticky")
-        //   } else {
-        //     // navbar.classList.remove(".sticky");
-        //   }
+    const handleOnScroll = () => {
+        let navbar = document.getElementById("navbar");
+        if (window.pageYOffset > navRef.current.offsetTop) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
     }
     const handleClick = () =>{
         
     }
+    window.onscroll = () =>{
+        handleOnScroll();
+    }
     return (
         <div className='aboutContainer'>
-            <div className={classNames('navbar',{'sticky':false})} ref={navRef} onScroll={() => handleScroll()}>
+            <div id='navbar' className='navbar'>
                 <div className='navBarContainer'>
                     <div className={classNames('home',{'active':true})} onClick={handleClick}>Home</div>
                     <div className='about'>About</div>
@@ -34,7 +31,7 @@ const About  = () =>{
                     <div className='contact'>Contact</div>
                 </div>
             </div>
-            <div id='about' className='aboutbody'>
+            <div id='about' className='aboutbody' ref={navRef}>
                 <h1 className='aboutTitle'>About</h1>
                 <div className='skills'>
                     <div className='fast'>

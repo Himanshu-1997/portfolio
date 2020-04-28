@@ -1,11 +1,14 @@
 .aboutContainer{
     // height: 100vh;
+    overflow: hidden;
     .navbar{
         background-color: #1b242f;
         border-bottom: 3px solid #04c2c9;
         color: white;
-        overflow: hidden;
+        z-index:99;
+        // transition: all 0.5s ease;
         &.sticky{
+            animation: popDown 0.5s;
             position: fixed;
             top: 0;
             width: 100%;
@@ -195,5 +198,10 @@
                 }
             }
         }
+    }
+}
+@keyframes popDown{
+    0% {
+        transform: translateY(-100px);
     }
 }

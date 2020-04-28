@@ -1,12 +1,13 @@
 .aboutContainer{
     // height: 100vh;
+    // margin-top: 140px;
     overflow: hidden;
     .navbar{
         background-color: #1b242f;
         border-bottom: 3px solid #04c2c9;
         color: white;
+        cursor: default;
         z-index:99;
-        // transition: all 0.5s ease;
         &.sticky{
             animation: popDown 0.5s;
             position: fixed;
@@ -32,9 +33,15 @@
                 &:hover{
                     color: #e31b6d;
                 }
+                &.active{
+                    color: #e31b6d;
+                }
             }
             .experience{
                 &:hover{
+                    color: #e31b6d;
+                }
+                &.active{
                     color: #e31b6d;
                 }
             }
@@ -42,9 +49,15 @@
                 &:hover{
                     color: #e31b6d;
                 }
+                &.active{
+                    color: #e31b6d;
+                }
             }
             .contact{
                 &:hover{
+                    color: #e31b6d;
+                }
+                &.active{
                     color: #e31b6d;
                 }
             }

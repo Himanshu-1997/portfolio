@@ -13,26 +13,29 @@ const About  = () =>{
             navbar.classList.remove("sticky");
         }
     }
-    const handleClick = () =>{
-        
+    const handleClick = (e) =>{
+        let show = e.target.innerText.toLowerCase();
+        document.getElementById(show).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+        // e.target.classList.add("active");
+        // console.log(e.target);
     }
     window.onscroll = () =>{
         handleOnScroll();
     }
     return (
-        <div className='aboutContainer'>
+        <div id='about' className='aboutContainer'>
             <div id='navbar' className='navbar'>
                 <div className='navBarContainer'>
-                    <div className={classNames('home',{'active':true})} onClick={handleClick}>Home</div>
-                    <div className='about'>About</div>
-                    <div className='experience'>Experience</div>
-                    <div className='education'>Education</div>
+                    <div name='home' className={classNames('home',{'active':true})} onClick={handleClick}>Home</div>
+                    <div name='about' className='about' onClick={handleClick}>About</div>
+                    <div name='experience' className='experience' onClick={handleClick}>Experience</div>
+                    <div name='education' className='education' onClick={handleClick}>Education</div>
                     <a className='resume' href='https://drive.google.com/file/d/1RENgWHxglsc0Ewln-ELbdze6ijnhU1Fg/view' rel="noopener noreferrer" target='_blank'>Resume</a>
-                    <div className='contact'>Contact</div>
+                    <div name='contact' className='contact' onClick={handleClick}>Contact</div>
                 </div>
             </div>
-            <div id='about' className='aboutbody' ref={navRef}>
-                <h1 className='aboutTitle'>About</h1>
+            <div  className='aboutbody'>
+                <h1 className='aboutTitle' ref={navRef}>About</h1>
                 <div className='skills'>
                     <div className='fast'>
                         <div>Fast</div>

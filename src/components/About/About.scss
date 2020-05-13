@@ -2,6 +2,9 @@
     // height: 100vh;
     // margin-top: 140px;
     overflow: hidden;
+    .collNavbar{
+        display: none;
+    }
     .navbar{
         background-color: #1b242f;
         border-bottom: 3px solid #04c2c9;
@@ -213,6 +216,47 @@
 
 @media (max-width:600px){
     .aboutContainer{
+        .navbar{
+            display: none;
+        }
+        .collNavbar{
+            display: flex;
+            flex-direction: column;
+            background-color: #1b242f;
+            border-bottom: 3px solid #04c2c9;
+            color: white;
+            cursor: default;
+            z-index:99;
+            &.sticky{
+                animation: popDown 0.5s;
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            img{
+                height: 35px;
+                background: white;
+                width: 35px;
+                align-self: flex-end;
+                margin: 10px;
+            }
+            .navBarContainer{
+                font-size: 20px;
+                display: flex;
+                flex-direction: column;
+                text-transform: uppercase;
+                line-height: 2.5;
+                background: #333;
+                width: 100%;
+                align-items: flex-start;
+                transition: height 0.3s ease-out;
+                padding: 15px;
+                .resume{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
         .aboutbody{
             .skills{
                 flex-direction: column;

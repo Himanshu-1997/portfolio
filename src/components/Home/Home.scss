@@ -52,3 +52,10 @@
 // @keyframes type{ 
 //     from { width: 0; } 
 //   } 
+@media (max-width:600px){
+    .headContainer{
+        .headerWrapper{
+            padding: 10px;
+        }
+    }
+}

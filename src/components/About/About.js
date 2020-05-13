@@ -1,16 +1,20 @@
-import React from 'react';
+import React , {useState} from 'react';
 import classNames from '../../utils/classNames';
 
 import './About.scss';
 
 const About  = () =>{
     const navRef = React.createRef();
+    const [showMenu,setShowMenu] = useState(false);
     const handleOnScroll = () => {
         let navbar = document.getElementById("navbar");
+        let navbar1 = document.getElementById("navbar1");
         if (window.pageYOffset > navRef.current.offsetTop) {
             navbar.classList.add("sticky");
+            navbar1.classList.add("sticky");
         } else {
             navbar.classList.remove("sticky");
+            navbar1.classList.remove("sticky");
         }
     }
     const handleClick = (e) =>{
@@ -18,14 +22,18 @@ const About  = () =>{
         document.getElementById(show).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
         // e.target.classList.add("active");
         // console.log(e.target);
+        setShowMenu(!showMenu);
     }
     window.onscroll = () =>{
         handleOnScroll();
     }
+    const handleShowMenu = () =>{
+        setShowMenu(!showMenu);
+    }
     return (
         <div id='about' className='aboutContainer'>
             <div id='navbar' className='navbar'>
-                <div className='navBarContainer'>
+                <div className='navBarContainer' ref={navRef}>
                     <div name='home' className={classNames('home',{'active':true})} onClick={handleClick}>Home</div>
                     <div name='about' className='about' onClick={handleClick}>About</div>
                     <div name='experience' className='experience' onClick={handleClick}>Experience</div>
@@ -34,8 +42,21 @@ const About  = () =>{
                     <div name='contact' className='contact' onClick={handleClick}>Contact</div>
                 </div>
             </div>
+            <div id='navbar1' className='collNavbar'>
+                <img src={process.env.PUBLIC_URL + '/icons/hamburger.png'} alt='hamburger' onClick={handleShowMenu}></img>
+                {showMenu && ( 
+                    <div className='navBarContainer' ref={navRef}>
+                            <div name='home' className={classNames('home',{'active':true})} onClick={handleClick}>Home</div>
+                            <div name='about' className='about' onClick={handleClick}>About</div>
+                            <div name='experience' className='experience' onClick={handleClick}>Experience</div>
+                            <div name='education' className='education' onClick={handleClick}>Education</div>
+                            <a className='resume' href='https://drive.google.com/file/d/1RENgWHxglsc0Ewln-ELbdze6ijnhU1Fg/view' rel="noopener noreferrer" target='_blank'>Resume</a>
+                            <div name='contact' className='contact' onClick={handleClick}>Contact</div>
+                    </div>
+                )}
+            </div>
             <div  className='aboutbody'>
-                <h1 className='aboutTitle' ref={navRef}>About</h1>
+                <h1 className='aboutTitle' >About</h1>
                 <div className='skills'>
                     <div className='fast'>
                         <div>Fast</div>

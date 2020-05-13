@@ -8,7 +8,7 @@ const Experience = () => {
             <ul>
                 <li>
                     <div className='exp1'>
-                        <img src='./icons/paytm.jpg' alt='paytm'></img>
+                        <img src={process.env.PUBLIC_URL + '/icons/paytm.jpg'} alt='paytm'></img>
                         <div className='year'>Jul, 2019 - present</div>
                     </div>
                     <div className='role1'> Software Engineer </div>

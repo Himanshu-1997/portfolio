@@ -8,14 +8,14 @@ const Education = () => {
             <ul>
                 <li>
                     <div className='edu1'>
-                        <img src='./icons/bitnesra.png' alt='BitMesra'></img>
+                        <img src={process.env.PUBLIC_URL + '/icons/bitnesra.png'} alt='BitMesra'></img>
                         <div className='year'>Birla Institute Of Technology, Mesra(2015-2019)</div>
                     </div>
                     <div className='clg1'> B.E in Computer Science and Engineering (CGPA :- 8.35) </div>
                 </li>
                 <li>
                     <div className='edu1'>
-                        <img src='./icons/dav.png' alt='BitMesra'></img>
+                        <img src={process.env.PUBLIC_URL + '/icons/dav.png'} alt='DAV'></img>
                         <div className='year'>M.K. DAV Public School, Daltonganj(2012-2014)</div>
                     </div>
                     <div className='clg1'> Senior Secondary Education (Result:- 93.8 %) </div>

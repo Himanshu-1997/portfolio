@@ -43,3 +43,34 @@
         }
     }
 }
+@media (max-width:600px){
+    .expContainer{
+        ul{
+            padding: 5px;
+            height: 100%;
+            margin: 15px;
+            li{
+                display: flex;
+                flex-direction: column;
+                min-height: inherit;
+                padding: 0;
+                .exp1{
+                    padding: 7px;
+                    img{
+                        height: 77px;
+                        width: 150px;
+                    }
+                    .year{
+                        font-size: 18px;
+                    }
+                }
+                .role1{
+                    font-size: 18px;
+                    flex-grow: 1;
+                    align-self: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

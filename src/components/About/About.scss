@@ -101,7 +101,6 @@
             .responsive{
                 display: flex;
                 flex-direction: column;
-                // flex-basis: 20%;
                 margin: 0px 25px 0px 25px;
                 div{
                     &:first-child{
@@ -119,7 +118,6 @@
             .intuitive{
                 display: flex;
                 flex-direction: column;
-                // flex-basis: 20%;
                 margin: 0px 25px 0px 25px;
                 div{
                     &:first-child{
@@ -171,7 +169,6 @@
             justify-content: flex-start;
             align-items: flex-start;
             flex-basis: 40%;
-            // padding: 25px;
             line-height: 2;
             padding-top: 0px;
             font-size: 14px;
@@ -179,17 +176,12 @@
             list-style: none;
             margin-top: 0px;
             color: white;
-            // background-color: yellow;
             li{
                 display: flex;
                 background-color: #04c2c9;
                 margin-top: 7px;
                 margin-bottom: 7px;
                 width: 100%;
-                // min-width: 140px;
-                // max-width: 100%;
-                // padding-left: 4px;
-                // padding-right: 4px;
                 div{
                     &:first-child{
                         min-width: 25%;
@@ -216,5 +208,43 @@
 @keyframes popDown{
     0% {
         transform: translateY(-100px);
+    }
+}
+
+@media (max-width:600px){
+    .aboutContainer{
+        .aboutbody{
+            .skills{
+                flex-direction: column;
+                margin: 0px;
+                .fast{
+                    padding: 10px;
+                    margin: 0px;
+                }
+                .responsive{
+                    padding: 10px;
+                    margin: 0px;
+                }
+                .intuitive{
+                    padding: 10px;
+                    margin: 0px;
+                }
+                .dynamic{
+                    padding: 10px;
+                    margin: 0px;
+                }
+            }
+        }
+        .aboutskills{
+            flex-direction: column;
+            margin-top: 0px;
+            .profilePic{
+                margin: 40px;
+            }
+        }
+        .skillset{
+            margin: 9px;
+            padding: 20px;
+        }
     }
 }

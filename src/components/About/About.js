@@ -56,7 +56,7 @@ const About  = () =>{
                 </div>
             </div>
             <div className='aboutskills'>
-                <img className='profilePic' src='./icons/pp.jpg' alt='profilePic'></img>
+                <img className='profilePic' src={process.env.PUBLIC_URL + '/icons/pp.jpg'} alt='profilePic'></img>
                 <ul className='skillset'>
                     <li>
                         <div>css</div>

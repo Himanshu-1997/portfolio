@@ -17,7 +17,7 @@
         flex-direction: column;
         background-color: white;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-        width: 500px;
+        // width: 500px;
         align-self: center;
         padding: 30px;
         .linkedin{
@@ -104,6 +104,18 @@
                     color: #04c2c9;
                 }
             }
+        }
+    }
+}
+
+@media (max-width:600px){
+    .contactContainer{
+        .contactList{
+            // width: -webkit-fill-available;
+            margin: 13px;
+            padding: 17px;
+            word-break: break-all;
+            // align-self: flex-start;
         }
     }
 }
